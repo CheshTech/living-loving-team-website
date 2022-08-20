@@ -22,8 +22,8 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "WvjXRh8XLS6F-DGeKJRUVWQ-OW_WWvSO1Kuh7Hbagn0",
-      "spaceId": "yurgwn7wj1zi"
+      "accessToken": process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+      "spaceId": process.env.GATSBY_CONTENTFUL_SPACE_ID
     }
   }, 
   {
@@ -35,7 +35,7 @@ module.exports = {
       background_color: `#663399`,
       theme_color: `#663399`,
       display: `minimal-ui`,
-      icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      icon: `src/images/llt_favicon.png`, // This path is relative to the root of the site.
     },
   },
   "gatsby-plugin-styled-components", {
@@ -47,8 +47,7 @@ module.exports = {
   {
     resolve: "gatsby-plugin-mailchimp",
     options: {
-      endpoint:
-        "https://gmail.us14.list-manage.com/subscribe/post?u=0cff58ec3ae88590ba60a7f81&amp;id=00953de9e1", // string; add your MC list endpoint here; see instructions below
+      endpoint: process.env.GATSBY_MAILCHIMP, // string; add your MC list endpoint here; see instructions below
       timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
     },
   },
