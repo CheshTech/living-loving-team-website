@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import BlogGrid from "../components/bloggrid"
+import { getImage } from "gatsby-plugin-image";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -38,9 +39,9 @@ const Portfolio = ({ data }) => {
     },
   } = data
   const { heroImage } = data.contentfulBlogPost
-
+  const blogHeroImage = getImage(data.contentfulBlogPost.heroImage.gatsbyImageData)
   return (
-    <Layout type="post" img={heroImage.fluid}>
+    <Layout type="post" img={blogHeroImage}>
       <div className="fadeIn">
         <Wrapper>
           <Information
@@ -61,7 +62,7 @@ export const pageQuery = graphql`
       title
       createdAt
       heroImage {
-        gatsbyImageData
+        gatsbyImageData(placeholder: TRACED_SVG)
       }
       body {
         childMarkdownRemark {
