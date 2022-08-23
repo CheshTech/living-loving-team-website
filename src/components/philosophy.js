@@ -178,9 +178,10 @@ const information = [
   {
     title: "Address",
     lines: [
-      "Fireside Real Estate",
-      "5009 N Central Ave",
-      "Tampa, Florida 33603",
+      "Compass",
+      "3615 Bromley Grand Ave Suite 230",
+      "Tampa, Florida 33607",
+      "Office number: 813-355-0744"
     ],
   },
   {

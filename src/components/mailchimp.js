@@ -34,10 +34,11 @@ const StyledInput = styled(Input)`
 `
 
 const StyledButton = styled(Button)`
-  background: ${Colors.fawn};
-  color: $ ${Colors.white};
+  background: ${Colors.lightGrey};
+  color: ${Colors.black};
   &:hover {
-    color: #fff;
+    color: ${Colors.offWhite};
+    background: ${Colors.black};
   }
 `
 

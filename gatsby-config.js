@@ -55,7 +55,7 @@ module.exports = {
     resolve: "gatsby-plugin-robots-txt",
     options: {
       host: "https://www.livinglovingteam.com",
-      sitemap: "https://www.livinglovingteam.com/sitemap.xml",
+      sitemap: "https://www.livinglovingteam.com/sitemap/sitemap-0.xml",
       policy: [{ userAgent: "*", allow: "/" }],
     },
   },
