@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Subtitle, SEOTitle, Column, Container } from "../theme"
-import { Colors, Responsive } from "../theme/styles"
-import freebie from "../images/LLTFreebieGuides.png"
+import {  Responsive } from "../theme/styles"
 import Mailchimp from "./mailchimp"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Grid = styled.div`
   display: grid;
@@ -26,11 +26,6 @@ text-align: center;
   ${Responsive.lg`
 width: 100%;
 `}
-`
-
-const Image = styled.img`
-  border-radius: 5px;
-  // box-shadow: 10px 5px 5px ${Colors.green};
 `
 
 const FreebieColumn = styled(Column)`
@@ -60,9 +55,9 @@ const LeadMagnet = () => {
         </SEOTitle>
         <Grid>
           <FreebieColumn>
-            <Image
-              src={freebie}
-              alt="Web With Will Fitness Website Guide"
+            <StaticImage
+              src="../images/LLTFreebieGuides2.png"
+              alt="Living Loving Team Buying and Selling Guides"
               placeholder="blurred"
             />
           </FreebieColumn>

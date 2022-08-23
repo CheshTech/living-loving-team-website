@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
-import logocolor from "../images/logo.svg"
-import logowhite from "../images/logo_white.svg"
+import logocolor from "../images/newlogocolor.png"
+import logowhite from "../images/newlogowhite.png"
 import styled from "styled-components"
 import { Nav, IDXNav, Row } from "../theme/index"
 import { Colors } from "../theme/styles"
@@ -35,9 +35,9 @@ const Div = styled.div`
 `
 
 const Logo = styled.img`
-  width: 125px;
+  width: 350px;
   @media (max-width: 720px) {
-    width: 100px;
+    width: 200px;
     margin-bottom: 12px;
   }
 `

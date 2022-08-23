@@ -70,7 +70,7 @@ const StyledColumn = styled.div`
     width: 75%;
     h2 {
       width: 100%;
-      color: #fff;
+      color: #000;
     }
   }
 `
@@ -136,7 +136,7 @@ const HomeSplash = () => {
         </ButtonContainer>
       </StyledColumn>
       <StyledImageBox>  
-        <StaticImage src="../images/home_splash.jpg" style={{ minHeight: "600px"}} loading="eager" />
+        <StaticImage src="../images/homehero.png" style={{ minHeight: "600px"}} loading="eager" />
         <DesktopDiv>
           <Cta type="home" />
         </DesktopDiv>
