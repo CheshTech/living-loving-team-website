@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Title } from "../theme/index"
 import { BgImage } from "gbimage-bridge";
-import { graphql, useStaticQuery } from "gatsby";
-import BackgroundImage from "gatsby-background-image"
 
 
 const StyledImg = styled(BgImage)`
@@ -23,24 +21,10 @@ const StyledImg = styled(BgImage)`
   }
 `
 
-const Splash = ({ img, title, type }) => {
-
-//   const data = useStaticQuery(graphql`
-//   query {
-//     contentfulHomeHero {
-//       heroImage {
-//         gatsbyImageData(placeholder: BLURRED)
-//       }
-//     }
-//   }
-// `);
-
-// const backgroundImage = getImage(
-//   data.contentfulHomeHero.heroImage.gatsbyImageData
-// );
+const Splash = ({ img, loading, title, type }) => {
 
   return (
-    <StyledImg image={img}>
+    <StyledImg image={img} loading={loading}>
       <Title white splash>
         {title}
       </Title>

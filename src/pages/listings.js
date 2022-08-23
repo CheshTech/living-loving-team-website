@@ -1,7 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { ListingLink } from "../components/listinglink"
 import styled from "styled-components"
@@ -31,7 +31,7 @@ const Listings = () => {
     query {
       placeholderImage: file(relativePath: { eq: "listings_splash.jpg" }) {
         childImageSharp {
-          gatsbyImageData( quality: 100) 
+          gatsbyImageData( quality: 100, placeholder: TRACED_SVG) 
         }
       }
     }
@@ -51,7 +51,7 @@ const Listings = () => {
       title="Living Loving Team Property Listings"
       img={heroImage}
     >
-      <SEO title="Listings" />
+      <Seo title="Listings" />
       <div id="idxStart"></div>
       <div id="idxStop"></div>
       <Grid>

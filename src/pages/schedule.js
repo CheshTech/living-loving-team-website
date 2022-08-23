@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ContactForm from "../components/contactform"
 import FooterCTA from "../components/footercta"
 import { getImage } from "gatsby-plugin-image";
@@ -31,6 +31,12 @@ margin-top: 0px;
 `}
 `
 
+const StyledSEOTitle = styled(SEOTitle)`
+  ${Responsive.sm`
+    text-align: center;
+  `}
+`
+
 const Schedule = () => {
   useEffect(() => {
     const head = document.querySelector("head")
@@ -46,7 +52,7 @@ const Schedule = () => {
     query {
       placeholderImage: file(relativePath: { eq: "schedule_splash.jpg" }) {
           childImageSharp {
-            gatsbyImageData( quality: 100) 
+            gatsbyImageData( quality: 100, placeholder: TRACED_SVG) 
           }
       }
     }
@@ -58,14 +64,15 @@ const Schedule = () => {
       type="schedule"
       img={heroImage}
       title="Contact Us Today!"
+      loading="eager"
     >
-      <SEO title="Schedule an appointment" />
+      <Seo title="Schedule an appointment" />
       <Container>
         <Column margin="75px auto" alignitems="center">
-          <SEOTitle margin="0 0 5px 0">
+          <StyledSEOTitle margin="0 0 5px 0">
             Have any questions? Contact us today!
-          </SEOTitle>
-          <Subtitle small>
+          </StyledSEOTitle>
+          <Subtitle small textAlign="center">
             Fill out the form below, or schedule a video consultation today and
             we'll start your home buying or selling journey!
           </Subtitle>

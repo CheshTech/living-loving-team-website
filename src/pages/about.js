@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import FooterCTA from "../components/footercta"
 import { Text, Column, Row, Button, Subtitle, SEOTitle } from "../theme/index"
 import kisha from "../images/kisha.jpg"
@@ -155,7 +155,7 @@ const About = () => {
     query {
       placeholderImage: file(relativePath: { eq: "about_splash.jpg" }) {
         childImageSharp {
-          gatsbyImageData( quality: 100) 
+          gatsbyImageData( quality: 100, placeholder: TRACED_SVG) 
         }
       }
     }
@@ -167,8 +167,9 @@ const About = () => {
       type="about"
       img={heroImage}
       title="Meet the team"
+      loading="eager"
     >
-      <SEO
+      <Seo
         title="About the Living Loving Team"
         description="Learn about Tampa Bay real estate's finest team! The Living Loving Team is here to find your dream home"
       />

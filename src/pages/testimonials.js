@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Ratings from "../components/ratings"
 import { Row, Text, Subtitle, Column } from "../theme"
 import { graphql, StaticQuery } from "gatsby"
@@ -85,7 +85,7 @@ const Testimonials = () => (
           relativePath: { eq: "testimonials_splash.jpg" }
         ) {
           childImageSharp {
-            gatsbyImageData( quality: 100) 
+            gatsbyImageData( quality: 100, placeholder: TRACED_SVG) 
           }
         }
         allContentfulTestimonial(sort: { order: DESC, fields: publishDate }) {
@@ -110,8 +110,9 @@ const Testimonials = () => (
           type="testimonials"
           img={heroImage}
           title="Testimonials"
+          loading="eager"
         >
-          <SEO
+          <Seo
             title="Living Loving Team Testimonials"
             description="Reviews on the best realtors in Tampa! Hear from our happy clients."
           />

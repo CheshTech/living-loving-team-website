@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import FooterCTA from "../components/footercta"
 import { Row, SEOTitle } from "../theme"
 import { graphql, StaticQuery } from "gatsby"
@@ -36,7 +36,7 @@ const Blog = () => (
       query {
         placeholderImage: file(relativePath: { eq: "blog_splash.jpg" }) {
           childImageSharp {
-            gatsbyImageData( quality: 100) 
+            gatsbyImageData( quality: 100, placeholder: TRACED_SVG) 
           }
         }
         allContentfulBlogPost {
@@ -63,8 +63,9 @@ const Blog = () => (
           type="blog"
           img={heroImage}
           title="Blog"
+          loading="eager"
         >
-          <SEO
+          <Seo
             title="Blog"
             description="The best tips to help you find your new home in the Tampa Bay real estate market"
           />

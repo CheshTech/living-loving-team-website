@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { handleNeighborhood } from "../constants/neighborhoods"
 import NeighborhoodsWidget from "../components/neighborhoods_widget"
 import { Row, Text, Button, Subtitle, Column } from "../theme"
@@ -70,7 +70,7 @@ const Neighborhoods = () => {
     query {
       placeholderImage: file(relativePath: { eq: "neighborhoods_splash.jpg" }) {
         childImageSharp {
-          gatsbyImageData(quality: 100) 
+          gatsbyImageData(quality: 100, placeholder: TRACED_SVG) 
         }
       }
     }
@@ -83,8 +83,9 @@ const heroImage = getImage(data.placeholderImage)
       // img={getImage(data.placeholderImage.gatsbyImageData)}
       img={heroImage}
       title="Neighborhoods"
+      loading="eager"
     >
-      <SEO
+      <Seo
         title="Best Neighborhoods in Tampa"
         description="Discover the best neighborhoods in Tampa Bay to live with The Living Loving Team. Your dream home awaits!"
       />

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { Title, Subtitle, Column, Button, Row } from "../theme"
-import { CTA } from "./cta"
+import { Cta } from "./cta"
 import { Fonts, Responsive } from "../theme/styles"
 import Modal from "./modal"
 import {  StaticImage } from "gatsby-plugin-image"
@@ -136,9 +136,9 @@ const HomeSplash = () => {
         </ButtonContainer>
       </StyledColumn>
       <StyledImageBox>  
-        <StaticImage src="../images/home_splash.jpg" style={{ minHeight: "600px"}} />
+        <StaticImage src="../images/home_splash.jpg" style={{ minHeight: "600px"}} loading="eager" />
         <DesktopDiv>
-          <CTA type="home" />
+          <Cta type="home" />
         </DesktopDiv>
       </StyledImageBox>
       <Modal show={show} toggleModal={toggleModal} type="resources" />

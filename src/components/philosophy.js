@@ -156,6 +156,15 @@ const StyledTextColumn = styled(Column)`
   width: 90%;
   @media (max-width: 480px) {
     width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+`
+
+const StyledSEOTitle = styled(SEOTitle)`
+text-align: left;
+  @media (max-width: 480px) {
+    text-align: center;
   }
 `
 
@@ -211,9 +220,9 @@ export default function Philosophy() {
           </StyledContactColumn>
           <MobileImage src={philosophypic} />
           <PhilosophyBox>
-            <SEOTitle white margin="0">
+            <StyledSEOTitle white margin="0">
               Philosophy
-            </SEOTitle>
+            </StyledSEOTitle>
             <StyledTextColumn>
               <Text white small>
                 The Living Loving Team strives to ensure the positive growth of

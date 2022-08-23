@@ -8,7 +8,7 @@ import Footer from "./footer"
 import Splash from "./splash"
 import HomeSplash from "./homesplash"
 
-const Layout = ({ children, type, img, title }) => {
+const Layout = ({ children, type, img, title, loading }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,7 +23,7 @@ const Layout = ({ children, type, img, title }) => {
     <>
       <Navigation type={type} siteTitle={data.site.siteMetadata.title} />
       {type === "home" && <HomeSplash />}
-      {type !== "home" && <Splash img={img} title={title} type={type} />}
+      {type !== "home" && <Splash img={img} title={title} type={type} loading={loading} />}
 
       <div
         style={{

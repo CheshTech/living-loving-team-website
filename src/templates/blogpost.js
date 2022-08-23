@@ -38,7 +38,6 @@ const Portfolio = ({ data }) => {
       body: { childMarkdownRemark: html },
     },
   } = data
-  const { heroImage } = data.contentfulBlogPost
   const blogHeroImage = getImage(data.contentfulBlogPost.heroImage.gatsbyImageData)
   return (
     <Layout type="post" img={blogHeroImage}>

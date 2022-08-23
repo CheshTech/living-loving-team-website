@@ -36,7 +36,7 @@ const Image = styled.img`
   margin-right: 16px;
 `
 
-export function CTA({ type }) {
+export function Cta({ type }) {
   return (
     <Wrapper home={type}>
       <Section>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import BlogGrid from "../components/bloggrid"
 import LeadMagnet from "../components/leadmagnet"
 import Philosophy from "../components/philosophy"
@@ -32,7 +32,7 @@ const Index = () => {
 
   return (
     <Layout type="home">
-      <SEO title="Living Loving Team: Tampa's Finest Real Estate Team" />
+      <Seo title="Living Loving Team: Tampa's Finest Real Estate Team" />
       <ValueProp />
       <Philosophy />
       <Search />
