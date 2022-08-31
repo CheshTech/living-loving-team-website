@@ -73,11 +73,11 @@ const Ratings = ({ type }) => {
             )
           })}
         </Grid>
-        {type !== "testimonialPage" && (
+        {/* {type !== "testimonialPage" && (
           <Link to="/testimonials">
             <Button>View Testimonials</Button>
           </Link>
-        )}
+        )} */}
       </Column>
     </Container>
   )

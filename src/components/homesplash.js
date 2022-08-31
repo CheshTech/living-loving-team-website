@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { Title, Subtitle, Column, Button, Row } from "../theme"
 import { Cta } from "./cta"
@@ -103,17 +102,6 @@ align-items: center;
 `}
 `
 
-const StyledButton = styled(Button)`
-  ${Responsive.sm`
-margin-right: 0px;
-margin-bottom: 10px;
-`}
-  ${Responsive.lg`
-margin-right: 10px;
-margin-bottom: 0px;
-`}
-`
-
 const HomeSplash = () => {
   const [show, setShow] = useState(false)
 
@@ -129,14 +117,11 @@ const HomeSplash = () => {
         </HomeTitle>
         <HomeSubtitle>Tampa Bay’s premier real estate team</HomeSubtitle>
         <ButtonContainer justifycontent>
-          <Link to="/schedule">
-            <StyledButton>Contact Us</StyledButton>
-          </Link>
           <Button onClick={() => toggleModal()}>Free Buyer/Seller Guide</Button>
         </ButtonContainer>
       </StyledColumn>
       <StyledImageBox>  
-        <StaticImage src="../images/homehero.png" style={{ minHeight: "600px"}} loading="eager" />
+        <StaticImage src="../images/herohome.png" style={{ minHeight: "600px"}} loading="eager" />
         <DesktopDiv>
           <Cta type="home" />
         </DesktopDiv>
