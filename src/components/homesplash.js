@@ -40,6 +40,9 @@ const HomeSubtitle = styled(Subtitle)`
   letter-spacing: 2px;
   color: #000;
   font-family: ${Fonts.sofiaBold};
+  @media (max-width: 980px) {
+    color: #fff;
+  }
 `
 
 const StyledColumn = styled.div`
@@ -121,7 +124,7 @@ const HomeSplash = () => {
         </ButtonContainer>
       </StyledColumn>
       <StyledImageBox>  
-        <StaticImage src="../images/herohome.png" style={{ minHeight: "600px"}} loading="eager" />
+        <StaticImage src="../images/bannerimage.png" style={{ minHeight: "600px"}} loading="eager" />
         <DesktopDiv>
           <Cta type="home" />
         </DesktopDiv>
