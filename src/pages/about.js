@@ -224,13 +224,6 @@ const About = () => {
         "https://livinglovingteam.idxbroker.com/idx/agent/190927/kaitlin-brennan",
     },
     {
-      headshot: data.anthony.childImageSharp.gatsbyImageData,
-      name: "Anthony",
-      bio: `Anthony Cortese has lived in the Tampa Bay area for over 3 years coming from the cold northwest. He couldn’t imagine living anywhere that does not have sunshine and beaches! He graduated from The University of South Florida, attaining a bachelor's degree in Marketing. Anthony has worked a variety of jobs in the marketing field ranging from the Minnesota Vikings to the University of South Florida Athletic Department. This experience gives Anthony a unique skill set in negotiation and marketing tactics to make certain both buyers and sellers get the price they desire. In 2021 Anthony Joined The Living Loving Team, a local real estate team focused on community minded real estate. When he is not helping families make real estate moves or investing in his own real estate, he is playing hockey, relaxing on the beach, and cheering on his favorite football and hockey teams! `,
-      profile:
-        "https://livinglovingteam.idxbroker.com/idx/agent/190927/kaitlin-brennan",
-    },
-    {
       headshot: data.nicola.childImageSharp.gatsbyImageData,
       name: "Nicola",
       bio: `Nicola has lived in St. Petersburg for the past eighteen years after making the big move across the bridge after up in Tampa. She loves all that the St. Pete/Tampa area has to offer!  She obtained her Master’s degree in Education Leadership from the University of South Florida and has recently left her twenty three year teaching career to join the Living Loving Team as our Director of Operations.  She keeps the team organized and keep the deals on track!  Outside of the work day, she loves spending time with her family, trying new restaurants, and enjoying concerts. `,

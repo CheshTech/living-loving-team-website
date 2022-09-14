@@ -13,7 +13,6 @@ import ValueProp from "../components/valueprop"
 import { useEffect } from "react"
 import Modal from "../components/modal.js"
 import FooterCTA from "../components/footercta"
-import HomeTestimonial from "../components/hometestimonial"
 
 const Index = () => {
   const [show, setShow] = useState(false)
@@ -41,7 +40,6 @@ const Index = () => {
       <LeadMagnet />
       <BlogGrid />
       <Ratings />
-      <HomeTestimonial />
       <Consultation />
       {show && <Modal show={show} toggleModal={toggleModal} />}
       <FooterCTA />
