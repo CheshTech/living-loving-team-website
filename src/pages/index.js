@@ -22,7 +22,7 @@ const Index = () => {
       setTimeout(() => {
         localStorage.setItem("subscribe", true)
         setShow(true)
-      }, 7500)
+      }, 12500)
     }
   }, [])
 
